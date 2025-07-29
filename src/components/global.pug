@@ -1,13 +1,36 @@
+//- 🏠 Sección: Portada Homepage ---------------------------------------------------------->
 
+mixin hero_section(icon_path, title, subtitle)
+    section.hero
+        img(src=`${base}${icon_path}`, width="140")
 
-mixin example_component_use( parameter_1 , parameter_2)
-    - const variable = 'Example Variable'
+        //- Título principal que capta la atención del visitante
+        h1 #{title}
 
-    <ul>
-        <li>#{ parameter_1 }</li>
-        <li>#{ parameter_2 }</li>
-        <li>#{ variable }</li>
-    </ul>
+        //- Subtítulo breve que refuerza el concepto del sitio
+        p.tagline #{subtitle}
+
+//- 🏠 Sección: Categorías de Eventos ----------------------------------------------------->
+
+mixin card_event_category(name, description)
+    .genre-card
+        h3.genre-name #{name}
+        p.genre-description #{description}
+
+//- 🏠 Sección: Grilla de Eventos ----------------------------------------------------->
+
+mixin card_event(path_url, title, date, place, event_time, genre, price_from)
+    a.event-card(href=path_url)
+        .event-image
+        .event-info
+            h3.event-title #{title}
+            .event-details
+                p #{date}
+                p #{place}
+                p #{event_time}
+                p #{genre}
+            .event-price Desde $#{price_from}
+
 
 
 

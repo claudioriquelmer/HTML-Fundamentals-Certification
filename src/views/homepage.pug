@@ -10,19 +10,7 @@ include ../includes/head
 
 
 <!-- Hero Section: sección principal visual que aparece al entrar al sitio -->
-<section class="hero">
-
-<!-- Imagen decorativa que representa el ambiente festivo -->
-<img src="#{base}assets/img/icons/mirror_ball.webp" width="140" alt="Bola de Fiesta Animada">
-
-<!-- Título principal que capta la atención del visitante -->
-<h1>La noche nunca termina</h1>
-
-<!-- Subtítulo breve que refuerza el concepto del sitio -->
-<p class="tagline">Tu acceso VIP al mejor underground electrónico</p>
-
-
-</section>
++hero_section("assets/img/icons/mirror_ball.webp", "La noche nunca termina", "Tu acceso VIP al mejor underground electrónico")
 
 
 <!-- Sección de búsqueda principal: permite filtrar eventos -->
@@ -51,6 +39,7 @@ include ../includes/head
 <p class="subtitle">Descubre las fiestas más exclusivas, DJs internacionales y la escena electrónica más vibrante de tu ciudad.</p>
 
 </section>
+
 
 <!-- Sección de estadísticas: muestra números impresionantes de la plataforma -->
 <section class="stats-section">
@@ -98,44 +87,27 @@ include ../includes/head
 <div class="genres-grid">
 
 <!-- Género 1: Techno -->
-<div class="genre-card">
-<h3 class="genre-name">Techno</h3>
-<p class="genre-description">Beats hipnóticos underground que te transportan a otro mundo</p>
-</div>
++card_event_category("Techno", "Beats hipnóticos underground que te transportan a otro mundo")
 
 <!-- Género 2: House -->
-<div class="genre-card">
-<h3 class="genre-name">House</h3>
-<p class="genre-description">Grooves contagiosos que hacen vibrar cada rincón</p>
-</div>
++card_event_category("House", "Grooves contagiosos que hacen vibrar cada rincón")
 
 <!-- Género 3: Trance -->
-<div class="genre-card">
-<h3 class="genre-name">Trance</h3>
-<p class="genre-description">Viajes sonoros épicos llenos de energía celestial</p>
-</div>
++card_event_category("Trance", "Viajes sonoros épicos llenos de energía celestial")
 
 <!-- Género 4: Drum & Bass -->
-<div class="genre-card">
-<h3 class="genre-name">Drum & Bass</h3>
-<p class="genre-description">Energía pura a 175 BPM que acelera tu corazón</p>
-</div>
++card_event_category("Drum & Bass", "Energía pura a 175 BPM que acelera tu corazón")
 
 <!-- Género 5: Progressive -->
-<div class="genre-card">
-<h3 class="genre-name">Progressive</h3>
-<p class="genre-description">Evolución musical que construye momentos únicos</p>
-</div>
++card_event_category("Progressive", "Evolución musical que construye momentos únicos")
 
 <!-- Género 6: Dubstep -->
-<div class="genre-card">
-<h3 class="genre-name">Dubstep</h3>
-<p class="genre-description">Drops explosivos que rompen todas las reglas</p>
-</div>
++card_event_category("Dubstep", "Drops explosivos que rompen todas las reglas")
 
 </div>
 
 </section>
+
 
 <!-- 🎉 Sección de eventos destacados: muestra las próximas fiestas imperdibles -->
 <section class="featured-events">
@@ -147,98 +119,27 @@ include ../includes/head
 <div class="events-grid">
 
 <!-- 🎫 Evento 1: Warehouse Sessions -->
-<a href="#" class="event-card"> <!-- La tarjeta completa es clickeable -->
-<div class="event-image"></div> <!-- Imagen del evento (relleno por ahora) -->
-<div class="event-info">
-<h3 class="event-title">Warehouse Sessions</h3>
-<div class="event-details">
-<p>Sábado 12 de Julio</p>
-<p>Underground Club</p>
-<p>22:00 - 06:00</p>
-<p>Techno Underground</p>
-</div>
-<div class="event-price">Desde $25.000</div>
-</div>
-</a>
++card_event("#", "Warehouse Sessions", "Sábado 12 de Julio", "Underground Club", "22:00 - 06:00", "Techno Underground", "25.000")
 
 <!-- 🎫 Evento 2: Neon Nights -->
-<a href="#" class="event-card">
-<div class="event-image"></div>
-<div class="event-info">
-<h3 class="event-title">Neon Nights</h3>
-<div class="event-details">
-<p>Viernes 18 de Julio</p>
-<p>Rooftop Paradise</p>
-<p>23:00 - 05:00</p>
-<p>Progressive House</p>
-</div>
-<div class="event-price">Desde $45.000</div>
-</div>
-</a>
++card_event("#", "Neon Nights", "Viernes 18 de Julio", "Rooftop Paradise", "23:00 - 05:00", "Progressive House", "45.000")
 
 <!-- 🎫 Evento 3: Bass Overdrive -->
-<a href="#" class="event-card">
-<div class="event-image"></div>
-<div class="event-info">
-<h3 class="event-title">Bass Overdrive</h3>
-<div class="event-details">
-<p>Domingo 20 de Julio</p>
-<p>Industrial Zone</p>
-<p>21:00 - 04:00</p>
-<p>Drum & Bass</p>
-</div>
-<div class="event-price">Desde $55.000</div>
-</div>
-</a>
++card_event("#", "Bass Overdrive", "Domingo 20 de Julio", "Industrial Zone", "21:00 - 04:00", "Drum & Bass", "55.000")
 
 <!-- 🎫 Evento 4: Sunset Rave -->
-<a href="#" class="event-card">
-<div class="event-image"></div>
-<div class="event-info">
-<h3 class="event-title">Sunset Rave</h3>
-<div class="event-details">
-<p>Sábado 25 de Julio</p>
-<p>Beach Club</p>
-<p>18:00 - 02:00</p>
-<p>Trance & Progressive</p>
-</div>
-<div class="event-price">Desde $75.000</div>
-</div>
-</a>
++card_event("#", "Sunset Rave", "Sábado 25 de Julio", "Beach Club", "18:00 - 02:00", "Trance & Progressive", "75.000")
 
 <!-- 🎫 Evento 5: Electric Storm -->
-<a href="#" class="event-card">
-<div class="event-image"></div>
-<div class="event-info">
-<h3 class="event-title">Electric Storm</h3>
-<div class="event-details">
-<p>Viernes 31 de Julio</p>
-<p>Mega Arena</p>
-<p>20:00 - 06:00</p>
-<p>Dubstep & Bass</p>
-</div>
-<div class="event-price">Desde $120.000</div>
-</div>
-</a>
++card_event("#", "Electric Storm", "Viernes 31 de Julio", "Mega Arena", "20:00 - 06:00", "Dubstep & Bass", "120.000")
 
 <!-- 🎫 Evento 6: Deep House Vibes -->
-<a href="#" class="event-card">
-<div class="event-image"></div>
-<div class="event-info">
-<h3 class="event-title">Deep House Vibes</h3>
-<div class="event-details">
-<p>Sábado 2 de Agosto</p>
-<p>Secret Location</p>
-<p>22:30 - 05:30</p>
-<p>Deep House</p>
-</div>
-<div class="event-price">Desde $35.000</div>
-</div>
-</a>
++card_event("#", "Deep House Vibe", "Sábado 02 de Agosto", "Secret Location", "22:30 - 05:30", "Deep House", "35.000")
 
 </div>
 
 </section>
+
 
 
 </main>
@@ -258,9 +159,11 @@ include ../includes/head
 
 //- Local JS Script ------------------------------------------------------------------------------->
 script.
-console.log("Hola Mundo desde 🎟️ TicketPass 😎")
+    console.log("Hola Mundo desde 🎟️ TicketPass 😎")
 
 
 //- Include Footer  ------------------------------------------------------------------------------>
 include ../includes/footer
+
+
 
