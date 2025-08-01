@@ -14,7 +14,7 @@ mixin hero_section(icon_path, title, subtitle)
 
 mixin card_event_category(name, description)
     .genre-card
-        h3.genre-name #{name}
+        h3.genre-name #{Capitalize(name)}
         p.genre-description #{description}
 
 //- 🏠 Sección: Grilla de Eventos ----------------------------------------------------->
@@ -25,11 +25,11 @@ mixin card_event(path_url, title, date, place, event_time, genre, price_from)
         .event-info
             h3.event-title #{title}
             .event-details
-                p #{date}
+                p #{Date_Long(date)}
                 p #{place}
                 p #{event_time}
                 p #{genre}
-            .event-price Desde $#{price_from}
+            .event-price Desde #{Format_CLP(price_from)}
 
 
 

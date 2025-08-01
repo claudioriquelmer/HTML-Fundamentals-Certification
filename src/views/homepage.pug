@@ -8,7 +8,6 @@ include ../includes/head
 <!-- Contenedor Principal -->
 <main class="content">
 
-
 <!-- Hero Section: sección principal visual que aparece al entrar al sitio -->
 +hero_section("assets/img/icons/mirror_ball.webp", "La noche nunca termina", "Tu acceso VIP al mejor underground electrónico")
 
@@ -78,67 +77,40 @@ include ../includes/head
 
 
 <!-- Sección de géneros musicales: muestra los estilos que organizamos -->
-<section class="genres-section">
+    <section class="genres-section">
 
-<!-- Título de la sección -->
-<h2 class="section-title">Géneros que mueven la noche</h2>
+        <!-- Título de la sección -->
+        <h2 class="section-title">Géneros que mueven la noche</h2>
 
-<!-- Grid de 3 columnas con los géneros principales -->
-<div class="genres-grid">
+        <!-- Grid de 3 columnas con los géneros principales -->
+        <div class="genres-grid">
 
-<!-- Género 1: Techno -->
-+card_event_category("Techno", "Beats hipnóticos underground que te transportan a otro mundo")
+            <!-- ⚠️ La identación en MUY IMPORTANTE ⚠️ -->
+            each value, index in events.category_events
+                +card_event_category(value.name, value.description)
 
-<!-- Género 2: House -->
-+card_event_category("House", "Grooves contagiosos que hacen vibrar cada rincón")
+        </div>
 
-<!-- Género 3: Trance -->
-+card_event_category("Trance", "Viajes sonoros épicos llenos de energía celestial")
-
-<!-- Género 4: Drum & Bass -->
-+card_event_category("Drum & Bass", "Energía pura a 175 BPM que acelera tu corazón")
-
-<!-- Género 5: Progressive -->
-+card_event_category("Progressive", "Evolución musical que construye momentos únicos")
-
-<!-- Género 6: Dubstep -->
-+card_event_category("Dubstep", "Drops explosivos que rompen todas las reglas")
-
-</div>
-
-</section>
+    </section>
 
 
 <!-- 🎉 Sección de eventos destacados: muestra las próximas fiestas imperdibles -->
-<section class="featured-events">
+    <section class="featured-events">
 
-<!-- 🏷️ Título principal de la sección -->
-<h2 class="section-title">Próximos eventos destacados</h2>
+        <!-- 🏷️ Título principal de la sección -->
+        <h2 class="section-title">Próximos eventos destacados</h2>
 
-<!-- 📦 Contenedor en formato grid con 3 columnas adaptables -->
-<div class="events-grid">
+        <!-- 📦 Contenedor en formato grid con 3 columnas adaptables -->
+        <div class="events-grid">
 
-<!-- 🎫 Evento 1: Warehouse Sessions -->
-+card_event("#", "Warehouse Sessions", "Sábado 12 de Julio", "Underground Club", "22:00 - 06:00", "Techno Underground", "25.000")
+            <!-- Todos los Eventos -->
+            each value, index in events.inperson_events
+                +card_event( "#", value.name, value.date, value.place, `${value.start_time} - ${value.end_time}`, value.category, value.price_from )
 
-<!-- 🎫 Evento 2: Neon Nights -->
-+card_event("#", "Neon Nights", "Viernes 18 de Julio", "Rooftop Paradise", "23:00 - 05:00", "Progressive House", "45.000")
 
-<!-- 🎫 Evento 3: Bass Overdrive -->
-+card_event("#", "Bass Overdrive", "Domingo 20 de Julio", "Industrial Zone", "21:00 - 04:00", "Drum & Bass", "55.000")
+        </div>
 
-<!-- 🎫 Evento 4: Sunset Rave -->
-+card_event("#", "Sunset Rave", "Sábado 25 de Julio", "Beach Club", "18:00 - 02:00", "Trance & Progressive", "75.000")
-
-<!-- 🎫 Evento 5: Electric Storm -->
-+card_event("#", "Electric Storm", "Viernes 31 de Julio", "Mega Arena", "20:00 - 06:00", "Dubstep & Bass", "120.000")
-
-<!-- 🎫 Evento 6: Deep House Vibes -->
-+card_event("#", "Deep House Vibe", "Sábado 02 de Agosto", "Secret Location", "22:30 - 05:30", "Deep House", "35.000")
-
-</div>
-
-</section>
+    </section>
 
 
 
