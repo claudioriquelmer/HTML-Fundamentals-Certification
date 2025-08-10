@@ -1,0 +1,85 @@
+mixin event_layout(type, name)
+    - const event = events[type].find(event => event.name === name)
+
+    main.event-detail
+        // Información del evento
+        section.event-info-detail
+            .event-header
+                .event-image-large
+                .event-badge Techno
+
+            .event-content
+                h1.event-title Warehouse Sessions
+                p.event-subtitle Una noche épica de techno underground en el corazón de la ciudad
+
+                .event-details-grid
+                    .detail-item
+                        .detail-icon 📅
+                        .detail-text
+                            .detail-label Fecha
+                            .detail-value Sábado 12 de Julio
+
+                    .detail-item
+                        .detail-icon ⏰
+                        .detail-text
+                            .detail-label Horario
+                            .detail-value 22:00 - 06:00
+
+                    .detail-item
+                        .detail-icon 🎧
+                        .detail-text
+                            .detail-label Género
+                            .detail-value Techno Underground
+
+                    .detail-item
+                        .detail-icon 👥
+                        .detail-text
+                            .detail-label Edad mínima
+                            .detail-value 18 años
+
+                .event-description
+                    h3.description-title Sobre el evento
+                    p.description-text
+                        | Sumérgete en una experiencia sonora única donde los beats más profundos del techno underground toman vida. Esta sesión nocturna promete llevarte a través de un viaje musical intenso con los mejores DJs locales e internacionales. El warehouse se transforma en un templo del sonido donde cada bass drop resuena en tu alma.
+                    br
+                    p.description-text
+                        | Ven preparado para una noche de música sin límites, luces estroboscópicas y una atmósfera que solo el verdadero underground puede ofrecer. Esta es tu oportunidad de ser parte de algo más grande que la música: es una experiencia colectiva inolvidable.
+
+                .venue-info
+                    h3.venue-title 📍 Underground Club
+                    p.venue-address Av. Industrial 1247, Zona Norte, Santiago
+                    .venue-features
+                        span.feature-tag Sistema de sonido profesional
+                        span.feature-tag 2 pisos
+                        span.feature-tag Estacionamiento
+                        span.feature-tag Bar completo
+                        span.feature-tag Zona chill
+
+        // Sección de compra
+        aside.purchase-section#purchase-section
+            h2.purchase-title Comprar Tickets
+
+            .price-display
+                .price-from Desde
+                .price-amount#min-price $25.000
+
+            .ticket-options#ticket-options
+                .option-title Tipo de entrada
+                // Las opciones de tickets se generarán dinámicamente con JavaScript
+
+            .quantity-selector
+                span.quantity-label Cantidad:
+                .quantity-controls
+                    button.quantity-btn#decrease-btn -
+                    span.quantity-display#quantity-display 1
+                    button.quantity-btn#increase-btn +
+
+            .total-section#total-section
+                // Esta sección se actualizará dinámicamente con JavaScript
+
+            button.buy-now-btn#buy-now-btn Comprar Ahora
+
+            .secure-info 🔒 Compra 100% segura y protegida
+
+        script(src="/assets/js/custom/sticky_ticket.js")
+
