@@ -1,140 +1,90 @@
-//- Include Local Data --------------------------------------------------------------------->
+//- Include Local Data
 - const base = ""
 
-
-//- Include Head   --------------------------------------------------------------------->
+//- Include Head
 include ../includes/head
 
-<!-- Contenedor Principal -->
-<main class="content">
+// Contenedor Principal
+main.content
+    //- Hero Section (usa el mixin; debe estar definido en includes/head o en un include anterior)
+    +hero_section('assets/img/icons/mirror_ball.webp', 'La noche nunca termina', 'Tu acceso VIP al mejor underground electrónico')
 
-<!-- Hero Section: sección principal visual que aparece al entrar al sitio -->
-+hero_section("assets/img/icons/mirror_ball.webp", "La noche nunca termina", "Tu acceso VIP al mejor underground electrónico")
+    //- Sección de búsqueda principal: permite filtrar eventos
+    section.main-search
+        //- Campo de texto para escribir el nombre del evento
+        input.search-input(type='text' placeholder='¿Qué evento buscas?')
 
+        //- Menú desplegable para seleccionar el género musical
+        select.search-select
+            option Géneros
+            option Techno
+            option House
+            option Trance
+            option Drum &amp; Bass
+            option Progressive
 
-<!-- Sección de búsqueda principal: permite filtrar eventos -->
-<section class="main-search">
+        //- Segundo campo de texto para escribir la ciudad del evento
+        input.search-input(type='text' placeholder='Ciudad')
 
-<!-- Campo de texto para escribir el nombre del evento -->
-<input type="text" class="search-input" placeholder="¿Qué evento buscas?">
+        //- Botón de acción para ejecutar la búsqueda
+        button.search-button
+            img(src= base + 'assets/img/icons/fire.webp' width='30' alt='telemoji fire' style='position:absolute;margin-left:-21px;margin-top:-6px')
+            |  Buscar
 
-<!-- Menú desplegable para seleccionar el género musical -->
-<select class="search-select">
-<option>Géneros</option>
-<option>Techno</option>
-<option>House</option>
-<option>Trance</option>
-<option>Drum & Bass</option>
-<option>Progressive</option>
-</select>
+        //- Descripción más extensa que da contexto al contenido
+        p.subtitle Descubre las fiestas más exclusivas, DJs internacionales y la escena electrónica más vibrante de tu ciudad.
 
-<!-- Segundo campo de texto para escribir la ciudad del evento -->
-<input type="text" class="search-input" placeholder="Ciudad">
+    //- Sección de estadísticas
+    section.stats-section
+        .stats-grid
+            .stat-item
+                .stat-number 2.5K+
+                .stat-label Fiestas organizadas
+            .stat-item
+                .stat-number 150+
+                .stat-label DJs internacionales
+            .stat-item
+                .stat-number 50K+
+                .stat-label Ravers conectados
+            .stat-item
+                .stat-number 20+
+                .stat-label Ciudades bailando
 
-<!-- Botón de acción para ejecutar la búsqueda -->
-<button class="search-button"><img src="#{base}assets/img/icons/fire.webp" width="30" alt="telemoji fire" style="position: absolute;margin-left: -21px;margin-top: -6px">&nbsp&nbsp Buscar</button>
-
-<!-- Descripción más extensa que da contexto al contenido -->
-<p class="subtitle">Descubre las fiestas más exclusivas, DJs internacionales y la escena electrónica más vibrante de tu ciudad.</p>
-
-</section>
-
-
-<!-- Sección de estadísticas: muestra números impresionantes de la plataforma -->
-<section class="stats-section">
-
-
-<!-- Grid de 4 columnas con las estadísticas principales -->
-<div class="stats-grid">
-
-<!-- Estadística 1: Fiestas organizadas -->
-<div class="stat-item">
-<div class="stat-number">2.5K+</div>
-<div class="stat-label">Fiestas organizadas</div>
-</div>
-
-<!-- Estadística 2: DJs internacionales -->
-<div class="stat-item">
-<div class="stat-number">150+</div>
-<div class="stat-label">DJs internacionales</div>
-</div>
-
-<!-- Estadística 3: Ravers conectados -->
-<div class="stat-item">
-<div class="stat-number">50K+</div>
-<div class="stat-label">Ravers conectados</div>
-</div>
-
-<!-- Estadística 4: Ciudades bailando -->
-<div class="stat-item">
-<div class="stat-number">20+</div>
-<div class="stat-label">Ciudades bailando</div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- Sección de géneros musicales: muestra los estilos que organizamos -->
-    <section class="genres-section">
-
-        <!-- Título de la sección -->
-        <h2 class="section-title">Géneros que mueven la noche</h2>
-
-        <!-- Grid de 3 columnas con los géneros principales -->
-        <div class="genres-grid">
-
-            <!-- ⚠️ La identación en MUY IMPORTANTE ⚠️ -->
+    //- Sección de géneros musicales
+    section.genres-section
+        h2.section-title Géneros que mueven la noche
+        .genres-grid
             each value, index in events.category_events
                 +card_event_category(value.name, value.description)
 
-        </div>
+    //- 🏠 Grilla de Eventos
+    section.featured-events
+        // 🏷️ Título principal de la sección
+        h2.section-title Próximos eventos destacados
 
-    </section>
-
-
-<!-- 🎉 Sección de eventos destacados: muestra las próximas fiestas imperdibles -->
-    <section class="featured-events">
-
-        <!-- 🏷️ Título principal de la sección -->
-        <h2 class="section-title">Próximos eventos destacados</h2>
-
-        <!-- 📦 Contenedor en formato grid con 3 columnas adaptables -->
-        <div class="events-grid">
-
-            <!-- Todos los Eventos -->
+        // 📦 Contenedor en formato grid con 3 columnas adaptables
+        .events-grid
+            // Todos los Eventos
             each value, index in events.inperson_events
-                +card_event( "#", value.name, value.date, value.place, `${value.start_time} - ${value.end_time}`, value.category, value.price_from )
+                +card_event(
+                    "#",
+                    value.name,
+                    value.date,
+                    value.place,
+                    `${value.start_time} - ${value.end_time}`,
+                    value.category,
+                    value.price_from
+                )
 
+//- Local Widget Components
+//- Local Libs
+//- Local Configs
 
-        </div>
-
-    </section>
-
-
-
-</main>
-
-
-//- Local Widget Components  --------------------------------------------------------------------->
-
-
-
-//- Local Libs  ---------------------------------------------------------------------------------->
-
-
-
-//- Local Configs  ------------------------------------------------------------------------------->
-
-
-
-//- Local JS Script ------------------------------------------------------------------------------->
+//- Local JS Script
 script.
     console.log("Hola Mundo desde 🎟️ TicketPass 😎")
 
-
-//- Include Footer  ------------------------------------------------------------------------------>
+//- Include Footer
 include ../includes/footer
 
 

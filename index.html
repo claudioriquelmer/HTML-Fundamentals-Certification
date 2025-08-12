@@ -11,97 +11,7 @@
     <title>Sintax PUG</title>
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <body><!-- Contenedor principal del menú de navegación -->
-<nav class="navbar">
-<!-- Cambiamos el aburrido emoji por un telemoji en el logo -->
-<a href="#" class="logo"><img src="assets/img/icons/ticket_pass.webp" width="50" alt="telemoji ticket">&nbsp;TicketPass</a>
-<!-- Lista de enlaces de navegación -->
-<ul class="nav-links">
-<!-- Primer enlace: lleva a la sección de inicio de sesión -->
-<li><a href="#login">Iniciar Sesión</a></li>
-<!-- Segundo enlace: lleva a la sección de registro y tiene estilo especial de botón -->
-<li><a href="#register" class="cta-button">Registrarse</a></li>
-</ul>
-</nav>
-    <main class="event-detail">
-      <!-- Información del evento-->
-      <section class="event-info-detail">
-        <div class="event-header">
-          <div class="event-image-large"></div>
-          <div class="event-badge">Techno</div>
-        </div>
-        <div class="event-content">
-          <h1 class="event-title">Warehouse Sessions</h1>
-          <p class="event-subtitle">Una noche épica de techno underground en el corazón de la ciudad</p>
-          <div class="event-details-grid">
-            <div class="detail-item">
-              <div class="detail-icon">📅</div>
-              <div class="detail-text">
-                <div class="detail-label">Fecha</div>
-                <div class="detail-value">Sábado 12 de Julio</div>
-              </div>
-            </div>
-            <div class="detail-item">
-              <div class="detail-icon">⏰</div>
-              <div class="detail-text">
-                <div class="detail-label">Horario</div>
-                <div class="detail-value">22:00 - 06:00</div>
-              </div>
-            </div>
-            <div class="detail-item">
-              <div class="detail-icon">🎧</div>
-              <div class="detail-text">
-                <div class="detail-label">Género</div>
-                <div class="detail-value">Techno Underground</div>
-              </div>
-            </div>
-            <div class="detail-item">
-              <div class="detail-icon">👥</div>
-              <div class="detail-text">
-                <div class="detail-label">Edad mínima</div>
-                <div class="detail-value">18 años</div>
-              </div>
-            </div>
-          </div>
-          <div class="event-description">
-            <h3 class="description-title">Sobre el evento</h3>
-            <p class="description-text">Sumérgete en una experiencia sonora única donde los beats más profundos del techno underground toman vida. Esta sesión nocturna promete llevarte a través de un viaje musical intenso con los mejores DJs locales e internacionales. El warehouse se transforma en un templo del sonido donde cada bass drop resuena en tu alma.</p><br/>
-            <p class="description-text">Ven preparado para una noche de música sin límites, luces estroboscópicas y una atmósfera que solo el verdadero underground puede ofrecer. Esta es tu oportunidad de ser parte de algo más grande que la música: es una experiencia colectiva inolvidable.</p>
-          </div>
-          <div class="venue-info">
-            <h3 class="venue-title">📍 Underground Club</h3>
-            <p class="venue-address">Av. Industrial 1247, Zona Norte, Santiago</p>
-            <div class="venue-features"><span class="feature-tag">Sistema de sonido profesional</span><span class="feature-tag">2 pisos</span><span class="feature-tag">Estacionamiento</span><span class="feature-tag">Bar completo</span><span class="feature-tag">Zona chill</span></div>
-          </div>
-        </div>
-      </section>
-      <!-- Sección de compra-->
-      <aside class="purchase-section" id="purchase-section">
-        <h2 class="purchase-title">Comprar Tickets</h2>
-        <div class="price-display">
-          <div class="price-from">Desde</div>
-          <div class="price-amount" id="min-price">$25.000</div>
-        </div>
-        <div class="ticket-options" id="ticket-options">
-          <div class="option-title">Tipo de entrada</div>
-          <!-- Las opciones de tickets se generarán dinámicamente con JavaScript-->
-        </div>
-        <div class="quantity-selector"><span class="quantity-label">Cantidad:</span>
-          <div class="quantity-controls">
-            <button class="quantity-btn" id="decrease-btn">-</button><span class="quantity-display" id="quantity-display">1</span>
-            <button class="quantity-btn" id="increase-btn">+</button>
-          </div>
-        </div>
-        <div class="total-section" id="total-section">
-          <!-- Esta sección se actualizará dinámicamente con JavaScript-->
-        </div>
-        <button class="buy-now-btn" id="buy-now-btn">Comprar Ahora</button>
-        <div class="secure-info">🔒 Compra 100% segura y protegida</div>
-      </aside>
-      <script src="/assets/js/custom/sticky_ticket.js"></script>
-    </main>
-  </body>
-</html><!-- Contenedor Principal -->
+  <body><!-- Contenedor Principal -->
 <main class="content">
 <!-- Hero Section: sección principal visual que aparece al entrar al sitio -->
 <section class="hero"><img src="assets/img/icons/mirror_ball.webp" width="140"/>
@@ -159,31 +69,37 @@
 <h2 class="section-title">Géneros que mueven la noche</h2>
 <!-- Grid de 3 columnas con los géneros principales -->
 <div class="genres-grid">
-<!-- ⚠️ La identación en MUY IMPORTANTE ⚠️ -->
+<!-- Género 1: Techno -->
 <div class="genre-card">
-  <h3 class="genre-name">Techno</h3>
-  <p class="genre-description">Beats hipnóticos underground que te transportan a otro mundo</p>
+<h3 class="genre-name">Techno</h3>
+<p class="genre-description">Beats hipnóticos underground que te transportan a otro mundo</p>
 </div>
+<!-- Género 2: House -->
 <div class="genre-card">
-  <h3 class="genre-name">House</h3>
-  <p class="genre-description">Grooves contagiosos que hacen vibrar cada rincón</p>
+<h3 class="genre-name">House</h3>
+<p class="genre-description">Grooves contagiosos que hacen vibrar cada rincón</p>
 </div>
+<!-- Género 3: Trance -->
 <div class="genre-card">
-  <h3 class="genre-name">Trance</h3>
-  <p class="genre-description">Viajes sonoros épicos llenos de energía celestial</p>
+<h3 class="genre-name">Trance</h3>
+<p class="genre-description">Viajes sonoros épicos llenos de energía celestial</p>
 </div>
+<!-- Género 4: Drum & Bass -->
 <div class="genre-card">
-  <h3 class="genre-name">Drum &amp; Bass</h3>
-  <p class="genre-description">Energía pura a 175 BPM que acelera tu corazón</p>
+<h3 class="genre-name">Drum & Bass</h3>
+<p class="genre-description">Energía pura a 175 BPM que acelera tu corazón</p>
 </div>
+<!-- Género 5: Progressive -->
 <div class="genre-card">
-  <h3 class="genre-name">Progressive</h3>
-  <p class="genre-description">Evolución musical que construye momentos únicos</p>
+<h3 class="genre-name">Progressive</h3>
+<p class="genre-description">Evolución musical que construye momentos únicos</p>
 </div>
+<!-- Género 6: Dubstep -->
 <div class="genre-card">
-  <h3 class="genre-name">Dubstep</h3>
-  <p class="genre-description">Evolución musical que construye momentos únicos</p>
-</div></div>
+<h3 class="genre-name">Dubstep</h3>
+<p class="genre-description">Drops explosivos que rompen todas las reglas</p>
+</div>
+</div>
 </section>
 <!-- 🎉 Sección de eventos destacados: muestra las próximas fiestas imperdibles -->
 <section class="featured-events">
@@ -191,73 +107,91 @@
 <h2 class="section-title">Próximos eventos destacados</h2>
 <!-- 📦 Contenedor en formato grid con 3 columnas adaptables -->
 <div class="events-grid">
-<!-- Todos los Eventos --><a class="event-card" href="#">
-  <div class="event-image"></div>
-  <div class="event-info">
-    <h3 class="event-title">Warehouse Sessions</h3>
-    <div class="event-details">
-      <p>Sábado, 12 De Julio</p>
-      <p>Underground Club</p>
-      <p>22:00 - 06:00</p>
-      <p>Techno</p>
-    </div>
-    <div class="event-price">Desde $25.000 CLP</div>
-  </div></a><a class="event-card" href="#">
-  <div class="event-image"></div>
-  <div class="event-info">
-    <h3 class="event-title">Neon Nights</h3>
-    <div class="event-details">
-      <p>Viernes, 18 De Julio</p>
-      <p>Rooftop Paradise</p>
-      <p>23:00 - 05:00</p>
-      <p>House</p>
-    </div>
-    <div class="event-price">Desde $45.000 CLP</div>
-  </div></a><a class="event-card" href="#">
-  <div class="event-image"></div>
-  <div class="event-info">
-    <h3 class="event-title">Bass Overdrive</h3>
-    <div class="event-details">
-      <p>Domingo, 20 De Julio</p>
-      <p>Industrial Zone</p>
-      <p>21:00 - 04:00</p>
-      <p>Trance</p>
-    </div>
-    <div class="event-price">Desde $55.000 CLP</div>
-  </div></a><a class="event-card" href="#">
-  <div class="event-image"></div>
-  <div class="event-info">
-    <h3 class="event-title">Sunset Rave</h3>
-    <div class="event-details">
-      <p>Viernes, 25 De Julio</p>
-      <p>Beach Club</p>
-      <p>18:00 - 02:00</p>
-      <p>Drum &amp; Bass</p>
-    </div>
-    <div class="event-price">Desde $75.000 CLP</div>
-  </div></a><a class="event-card" href="#">
-  <div class="event-image"></div>
-  <div class="event-info">
-    <h3 class="event-title">Electric Storm</h3>
-    <div class="event-details">
-      <p>Jueves, 31 De Julio</p>
-      <p>Mega Arena</p>
-      <p>20:00 - 06:00</p>
-      <p>Progressive</p>
-    </div>
-    <div class="event-price">Desde $120.000 CLP</div>
-  </div></a><a class="event-card" href="#">
-  <div class="event-image"></div>
-  <div class="event-info">
-    <h3 class="event-title">Deep House Vibes</h3>
-    <div class="event-details">
-      <p>Sábado, 02 De Agosto</p>
-      <p>Secret Location</p>
-      <p>22:30 - 05:30</p>
-      <p>Dubstep</p>
-    </div>
-    <div class="event-price">Desde $35.000 CLP</div>
-  </div></a></div>
+<!-- 🎫 Evento 1: Warehouse Sessions -->
+<a href="#" class="event-card"> <!-- La tarjeta completa es clickeable -->
+<div class="event-image"></div> <!-- Imagen del evento (relleno por ahora) -->
+<div class="event-info">
+<h3 class="event-title">Warehouse Sessions</h3>
+<div class="event-details">
+<p>Sábado 12 de Julio</p>
+<p>Underground Club</p>
+<p>22:00 - 06:00</p>
+<p>Techno Underground</p>
+</div>
+<div class="event-price">Desde $25.000</div>
+</div>
+</a>
+<!-- 🎫 Evento 2: Neon Nights -->
+<a href="#" class="event-card">
+<div class="event-image"></div>
+<div class="event-info">
+<h3 class="event-title">Neon Nights</h3>
+<div class="event-details">
+<p>Viernes 18 de Julio</p>
+<p>Rooftop Paradise</p>
+<p>23:00 - 05:00</p>
+<p>Progressive House</p>
+</div>
+<div class="event-price">Desde $45.000</div>
+</div>
+</a>
+<!-- 🎫 Evento 3: Bass Overdrive -->
+<a href="#" class="event-card">
+<div class="event-image"></div>
+<div class="event-info">
+<h3 class="event-title">Bass Overdrive</h3>
+<div class="event-details">
+<p>Domingo 20 de Julio</p>
+<p>Industrial Zone</p>
+<p>21:00 - 04:00</p>
+<p>Drum & Bass</p>
+</div>
+<div class="event-price">Desde $55.000</div>
+</div>
+</a>
+<!-- 🎫 Evento 4: Sunset Rave -->
+<a href="#" class="event-card">
+<div class="event-image"></div>
+<div class="event-info">
+<h3 class="event-title">Sunset Rave</h3>
+<div class="event-details">
+<p>Sábado 25 de Julio</p>
+<p>Beach Club</p>
+<p>18:00 - 02:00</p>
+<p>Trance & Progressive</p>
+</div>
+<div class="event-price">Desde $75.000</div>
+</div>
+</a>
+<!-- 🎫 Evento 5: Electric Storm -->
+<a href="#" class="event-card">
+<div class="event-image"></div>
+<div class="event-info">
+<h3 class="event-title">Electric Storm</h3>
+<div class="event-details">
+<p>Viernes 31 de Julio</p>
+<p>Mega Arena</p>
+<p>20:00 - 06:00</p>
+<p>Dubstep & Bass</p>
+</div>
+<div class="event-price">Desde $120.000</div>
+</div>
+</a>
+<!-- 🎫 Evento 6: Deep House Vibes -->
+<a href="#" class="event-card">
+<div class="event-image"></div>
+<div class="event-info">
+<h3 class="event-title">Deep House Vibes</h3>
+<div class="event-details">
+<p>Sábado 2 de Agosto</p>
+<p>Secret Location</p>
+<p>22:30 - 05:30</p>
+<p>Deep House</p>
+</div>
+<div class="event-price">Desde $35.000</div>
+</div>
+</a>
+</div>
 </section>
 </main>
 <script>
@@ -280,5 +214,3 @@
 </footer>
 </body> <!-- Cierre del cuerpo de la página -->
 </html> <!-- Cierre del documento HTML -->
-</body>
-</html>

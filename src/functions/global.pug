@@ -1,5 +1,29 @@
-//- Connection to PUG Functions ---------------------------------------------->
+//- 🏠 Sección: Portada Homepage ---------------------------------------------------------->
+mixin hero_section(icon_path, title, subtitle)
+    section.hero
+        img(src=`${base}${icon_path}`, width="140")
+        //- Título principal que capta la atención del visitante
+        h1= title
+        //- Subtítulo breve que refuerza el concepto del sitio
+        p.tagline= subtitle
 
-include utilities/string
-include utilities/integer
-include utilities/date
+
+//- 🏠 Sección: Categorías de Eventos ----------------------------------------------------->
+mixin card_event_category(name, description)
+    .genre-card
+        h3.genre-name= Capitalize(name)
+        p.genre-description= Capitalize(description)
+
+
+//- 🏠 Sección: Grilla de Eventos ----------------------------------------------------->
+mixin card_event(title, date, place, event_time, genre, price_from)
+    a.event-card(href=`evento/${Convert_URL(title)}`)
+        .event-image
+        .event-info
+            h3.event-title #{title}
+            .event-details
+                p #{Date_Long(date)}
+                p #{place}
+                p #{event_time}
+                p #{genre}
+            .event-price Desde #{Format_CLP(price_from)}

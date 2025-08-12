@@ -1,21 +1,18 @@
 
-//- Navbar --------------------------------------------------------------->
+//- Navbar ---------------------------------------------------------------
+// Contenedor principal del menú de navegación
+nav.navbar
+    // Enlace que actúa como logo y redirige al inicio
+    a.logo(href="/")
+        img(src=`${base}assets/img/icons/ticket_pass.webp`, width="50", alt="telemoji ticket")
+        |   TicketPass
 
-<!-- Contenedor principal del menú de navegación -->
-<nav class="navbar">
+    // Lista de enlaces de navegación
+    ul.nav-links
+        // Primer enlace: lleva a la sección de inicio de sesión
+        li
+            a(href="#login") Iniciar Sesión
 
-<!-- Cambiamos el aburrido emoji por un telemoji en el logo -->
-<a href="#" class="logo"><img src="#{base}assets/img/icons/ticket_pass.webp" width="50" alt="telemoji ticket">&nbsp;TicketPass</a>
-
-<!-- Lista de enlaces de navegación -->
-<ul class="nav-links">
-
-<!-- Primer enlace: lleva a la sección de inicio de sesión -->
-<li><a href="#login">Iniciar Sesión</a></li>
-
-<!-- Segundo enlace: lleva a la sección de registro y tiene estilo especial de botón -->
-<li><a href="#register" class="cta-button">Registrarse</a></li>
-
-</ul>
-
-</nav>
+        // Segundo enlace: lleva a la sección de registro y tiene estilo especial de botón
+        li
+            a.cta-button(href="#register") Registrarse
